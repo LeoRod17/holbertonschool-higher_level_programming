@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-txt = "{}"
 def uppercase(str):
+    txt = "{}"
     for x in str:
         x = ord(x)
         if x > 96 and x <= 123:
