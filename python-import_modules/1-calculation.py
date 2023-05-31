@@ -7,8 +7,7 @@ if __name__ == "__main__":
     txt4 = "{} * {} = {}"
     a = 10
     b = 5
-    print(txt1.format(a, b, cal.add (a, b)))
+    print(txt1.format(a, b, cal.add(a, b)))
     print(txt2.format(a, b, cal.sub(a, b)))
     print(txt4.format(a, b, cal.mul(a, b)))
     print(txt3.format(a, b, cal.div(a, b)))
-    
