@@ -4,4 +4,5 @@ def new_in_list(my_list, idx, element):
     size = len(copia)
     if (idx < size and idx >= 0):
         copia[idx] = element
+        return copia
     return my_list
