@@ -6,4 +6,5 @@ def best_score(a_dictionary):
         for x in a_dictionary:
             if (m == a_dictionary.get(x)):
                 return x
+        return None
     return None
