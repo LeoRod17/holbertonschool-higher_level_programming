@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if isinstance(roman_string, int):
+    if isinstance(roman_string, int) or roman_string == None:
         return 0
     if len(roman_string) == 0:
         return 0
