@@ -7,4 +7,5 @@ class Square:
     pass
 """(python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 This is an empty class of a square to practise in how we create a empty class without methods and attributes
+the pass it is for saying that it is an empty function and the class is square because that is the class that they asked
 """
