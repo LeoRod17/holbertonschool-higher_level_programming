@@ -19,11 +19,10 @@ class Square():
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
 
     """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-        I added some exceptions to the value of size
-        First: the value because a square can not be with minus size
-        Second: the size needs to be an int to do the calculations
+    I added some exceptions to the value of size
+    First: the value because a square can not be with minus size
+    Second: the size needs to be an int to do the calculations
     """
