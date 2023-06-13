@@ -15,7 +15,7 @@ class Square():
         this is a constructor it is for recieving the values and
         creating the class
         """
-        if isinstance(size, str):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
