@@ -6,8 +6,8 @@ this is proyect is to learn how to make chekers and tests to try
 
 def add_integer(a, b=98):
     """python3 -c 'print(__import__("my_module").my_function.__doc__)
-    a function that adds two ints and sends a error mesage if not an int or float
-    converts floats into ints 
+    a function that adds two ints and sends a error mesage if not an
+    int or float converts floats into ints
     """
 
     if isinstance(a, float):
