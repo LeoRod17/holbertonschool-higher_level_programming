@@ -12,6 +12,20 @@ Hola.
 <BLANKLINE>
 <BLANKLINE>
 
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("hello: what are you doing")
+hello:
+<BLANKLINE>
+ what are you doing
+
+>>> text_indentation("what are you doing? ah ok")
+what are you doing?
+<BLANKLINE>
+ ah ok
+
 >>> text_indentation(18)
 Traceback (most recent call last):
 TypeError: text must be a string

@@ -10,4 +10,3 @@ def text_indentation(text):
             print()
             txt = ""
     print("{}".format(txt))
-        
