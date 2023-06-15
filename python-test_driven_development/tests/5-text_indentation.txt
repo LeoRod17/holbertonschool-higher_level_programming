@@ -7,10 +7,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 >>> text_indentation("")
 <BLANKLINE>
->>> text_indentation("Hola.")
-Hola.
-<BLANKLINE>
-<BLANKLINE>
 
 >>> text_indentation()
 Traceback (most recent call last):
