@@ -63,6 +63,7 @@ class Rectangle:
         """a funtion that returns a string with what mades the rectangle"""
         rec = "Rectangle({}, {})".format(self.__width, self.__height)
         return rec
+
     def __del__(self):
         print("Bye rectangle...")
-        del(self)
+        del self
