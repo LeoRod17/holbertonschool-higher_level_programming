@@ -8,10 +8,11 @@ class Rectangle:
         """it creates the prototype of the class square"""
         self.__width = width
         self.__height = height
-    
+
     def width(self):
         """getter of width"""
         return self.__width
+
     def width(self, value):
         """setter of width"""
         if type(value) is not int:
@@ -20,9 +21,11 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
     def height(self):
         """getter of height"""
         return self.__height
+
     def height(self, value):
         """setter of height"""
         if type(value) is not int:
