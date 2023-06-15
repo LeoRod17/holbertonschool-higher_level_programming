@@ -2,6 +2,8 @@
 """ a function that prints a text with new lines after this
 characters: (.), (?) and (:)
 """
+
+
 def text_indentation(text):
     """the text will separate and print each time a special
     symbol appears
