@@ -14,6 +14,21 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     @property
+    def height(self):
+        """getter of height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter of height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
+
+    @property
     def width(self):
         """getter of width"""
         return self.__width
@@ -28,20 +43,6 @@ class Rectangle:
         else:
             self.__width = value
 
-    @property
-    def height(self):
-        """getter of height"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """setter of height"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
 
     def area(self):
         """function to calculate the area"""
