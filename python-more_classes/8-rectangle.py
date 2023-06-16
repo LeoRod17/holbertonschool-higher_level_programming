@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Adds a symbol to the class to print rectangle"""
+"""Adds perimeter and area to rectangle class"""
 
 
 class Rectangle:
@@ -65,11 +65,28 @@ class Rectangle:
         return rec[:-1]
 
     def __repr__(self):
-        """a funtion that returns a string with what mades the rectangle"""
+        """a function that returns a string with what mades the rectangle"""
         rec = "Rectangle({}, {})".format(self.__width, self.__height)
         return rec
 
     def __del__(self):
+        """a function that prints a a goodbye before deleting the rectangle
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
         del self
+    
+    def bigger_or_equal(rect_1, rect_2):
+        """a funtion that compare two rectangle for their area"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        a1 = Rectangle.area(rect_1)
+        a2 = Rectangle.area(rect_2)
+        if a1 > a2:
+            return rect_1
+        if a2 > a1:
+            return rect_2
+        if a1 == a2:
+            return rect_1
