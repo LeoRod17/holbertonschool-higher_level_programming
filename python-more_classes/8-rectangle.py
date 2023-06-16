@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Adds perimeter and area to rectangle class"""
+"""Adds calculate the bigger rectangle"""
 
 
 class Rectangle:
@@ -75,7 +75,7 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
         del self
-    
+
     def bigger_or_equal(rect_1, rect_2):
         """a funtion that compare two rectangle for their area"""
         if not isinstance(rect_1, Rectangle):
