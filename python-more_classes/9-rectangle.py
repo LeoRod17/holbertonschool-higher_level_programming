@@ -9,24 +9,9 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """it creates the prototype of the class square"""
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
-
-    @property
-    def height(self):
-        """getter of height"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """setter of height"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
 
     @property
     def width(self):
@@ -43,6 +28,20 @@ class Rectangle:
         else:
             self.__width = value
 
+    @property
+    def height(self):
+        """getter of height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter of height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
     def area(self):
         """function to calculate the area"""
