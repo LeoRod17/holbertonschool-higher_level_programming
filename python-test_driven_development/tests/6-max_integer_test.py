@@ -9,6 +9,8 @@ class TestMaxInteger(unittest.TestCase):
         """normal test of how it should work normaly"""
         self.assertTrue(max_integer([1, 2, 3, 4]))
         self.assertTrue(max_integer([1, 2, 4, 3]))
+        self.assertTrue(max_integer([4, 1, 4, 4]))
+        self.assertTrue(max_integer([-1, -2, -3, -4]))
 
     def testTypeError(self):
         """a function that test if a type error hapens"""
