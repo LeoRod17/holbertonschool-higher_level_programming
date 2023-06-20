@@ -12,3 +12,7 @@ ZeroDivisionError:division by zero
 
 >>> matrix_divided([[1,5, 2, 3],[4, 5,5, 6]], 2)
 [[0.75, 1, 1.5], [2, 2.75, 3]]
+
+>>> matrix_divided([["h", "o", "l"],["a", "a", "a"]], 2)
+Traceback (most recent call last):
+TypeError:

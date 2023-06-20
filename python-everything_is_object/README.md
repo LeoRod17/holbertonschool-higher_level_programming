@@ -1,0 +1,1 @@
+This proyect it is about thinking an realize what objects are an how to handle them here i made a blog about what i learned (later copy the link of blog here)
