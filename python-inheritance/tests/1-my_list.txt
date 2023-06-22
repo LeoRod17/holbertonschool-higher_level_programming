@@ -50,8 +50,8 @@ TypeError: 'NoneType' object is not iterable
 >>> my_list5.append(4)
 >>> my_list5.append(2)
 >>> my_list5.append(4)
->>> my_list5.append(-5)
+>>> my_list5.append(-7)
 >>> print(my_list5)
-[1, 4, 2, 4, -5]
+[1, 4, 2, 4, -7]
 >>> my_list5.print_sorted()
 [-5, 1, 2, 4, 4]
