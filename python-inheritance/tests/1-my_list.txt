@@ -24,7 +24,6 @@
 
 
 >>> my_list2 = MyList()
->>> my_list2 = MyList()
 >>> print(my_list2)
 []
 >>> my_list2.print_sorted()
@@ -41,3 +40,10 @@
 [0, 0, 0, 0, 0]
 >>> my_list3.print_sorted()
 [0, 0, 0, 0, 0]
+
+>>> my_list4 = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+>>> my_list4.print_sorted()
+Traceback (most recent call last):
+NameError: name 'my_list4' is not defined
