@@ -40,3 +40,15 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator(, 1)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> bg.integer_validator("My_bool", True)
+Traceback (most recent call last):
+TypeError: My_bool must be an integer
+
+>>> bg.integer_validator("My_Lies", False)
+Traceback (most recent call last):
+TypeError: My_Lies must be an integer
