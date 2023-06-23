@@ -96,3 +96,11 @@ TypeError: tupleA must be an integer
 >>> bg.integer_validator("dictionaryA", {})
 Traceback (most recent call last):
 TypeError: dictionaryA must be an integer
+
+>>> bg.integer_validator("Non", None)
+Traceback (most recent call last):
+TypeError: Non must be an integer
+
+>>> bg.integer_validator("Not"
+Traceback (most recent call last):
+SyntaxError: unexpected EOF while parsing
