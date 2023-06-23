@@ -2,14 +2,20 @@
 >>> bg = BaseGeometry()
 
 >>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
 
 >>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
 
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
+ValueError: distance must be greater than 0
 
 >>> bg.integer_validator("distance", true)
 Traceback (most recent call last):
+NameError: name 'true' is not defined
 
 >>> bg.integer_validator("distance", 4,5)
 Traceback (most recent call last):
