@@ -56,3 +56,13 @@ TypeError: My_Lies must be an integer
 >>> bg.integer_validator("floating", 10.9)
 Traceback (most recent call last):
 TypeError: floating must be an integer
+
+>>> bg.integer_validator(10.8, 10)
+
+>>> bg.integer_validator(True, 6)
+
+>>> bg.integer_validator(1, 10)
+
+>>> bg.integer_validator("Lists", [10, 11, 12, 13, 14, 15])
+Traceback (most recent call last):
+TypeError: Lists must be an integer
