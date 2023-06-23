@@ -109,3 +109,6 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 Traceback (most recent call last):
 SyntaxError: invalid syntax
 
+>>> bg.integer_validator("LimitsM", -1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+Traceback (most recent call last):
+ValueError: LimitsM must be greater than 0
