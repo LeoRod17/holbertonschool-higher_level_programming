@@ -52,3 +52,7 @@ TypeError: My_bool must be an integer
 >>> bg.integer_validator("My_Lies", False)
 Traceback (most recent call last):
 TypeError: My_Lies must be an integer
+
+>>> bg.integer_validator("floating", 10.9)
+Traceback (most recent call last):
+TypeError: floating must be an integer
