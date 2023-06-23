@@ -24,3 +24,16 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 >>> bg.integer_validator("my_int", 12)
 
+>>> bg.integer_validator("my_limit",float("inf"))
+Traceback (most recent call last):
+TypeError: my_limit must be an integer
+
+>>> bg.integer_validator("my_nothing",float("nan"))
+Traceback (most recent call last):
+TypeError: my_nothing must be an integer
+
+>>> bg.integer_validator("", 15)
+
+>>> bg.integer_validator("my_empty",)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
