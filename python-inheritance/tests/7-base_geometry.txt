@@ -66,3 +66,17 @@ TypeError: floating must be an integer
 >>> bg.integer_validator("Lists", [10, 11, 12, 13, 14, 15])
 Traceback (most recent call last):
 TypeError: Lists must be an integer
+
+>>> bg.integer_validator("Limits", 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+>>> bg.integer_validator("Minus", -55)
+Traceback (most recent call last):
+ValueError: Minus must be greater than 0
+
+>>> bg.integer_validator("ListsS", ["a", "b", "c", "d", "e", "f"])
+Traceback (most recent call last):
+TypeError: ListsS must be an integer
+
+>>> bg.integer_validator("emp","")
+Traceback (most recent call last):
+TypeError: emp must be an integer
