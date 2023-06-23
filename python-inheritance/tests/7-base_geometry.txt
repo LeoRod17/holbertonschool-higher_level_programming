@@ -88,3 +88,11 @@ TypeError: tuple must be an integer
 >>> bg.integer_validator("dictionary", {"a": 1, "b": 2})
 Traceback (most recent call last):
 TypeError: dictionary must be an integer
+
+>>> bg.integer_validator("tupleA", ())
+Traceback (most recent call last):
+TypeError: tupleA must be an integer
+
+>>> bg.integer_validator("dictionaryA", {})
+Traceback (most recent call last):
+TypeError: dictionaryA must be an integer
