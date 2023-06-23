@@ -80,3 +80,11 @@ TypeError: ListsS must be an integer
 >>> bg.integer_validator("emp","")
 Traceback (most recent call last):
 TypeError: emp must be an integer
+
+>>> bg.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+TypeError: tuple must be an integer
+
+>>> bg.integer_validator("dictionary", {"a": 1, "b": 2})
+Traceback (most recent call last):
+TypeError: dictionary must be an integer
