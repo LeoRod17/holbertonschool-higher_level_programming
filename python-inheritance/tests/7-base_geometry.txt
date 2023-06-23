@@ -13,10 +13,14 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
->>> bg.integer_validator("distance", true)
+>>> bg.integer_validator("false", true)
 Traceback (most recent call last):
 NameError: name 'true' is not defined
 
->>> bg.integer_validator("distance", 4,5)
+>>> bg.integer_validator("floating", 4,5)
 Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+
+>>> bg.integer_validator("my_int", 12)
+
