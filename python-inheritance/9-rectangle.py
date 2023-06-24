@@ -13,11 +13,9 @@ class Rectangle(BaseGeometry):
         BaseGeometry.integer_validator(self, "height", height)
 
     def area(self):
-       """a function that gives the area"""
-       return self.__width * self.__height
-    
+        """a function that gives the area"""
+        return self.__width * self.__height
 
     def __str__(self):
         """a function to print the rectangle with its values"""
-        return("[Rectangle] {}/{}".format(self.__width, self.__height))
-    
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
