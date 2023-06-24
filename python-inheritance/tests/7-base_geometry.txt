@@ -120,3 +120,5 @@ TypeError: char must be an integer
 >>> bg.integer_validator(None, None)
 Traceback (most recent call last):
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+>>> bg.integer_validator("",)
