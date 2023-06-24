@@ -10,3 +10,7 @@ class Square(Rectangle):
     def __init__(self, size):
         super().__init__(size, size)
         self.__size = size
+
+    def __str__(self):
+        """a function to print the Square with its values"""
+        return "[Square] {}/{}".format(self.__size, self.__size)
