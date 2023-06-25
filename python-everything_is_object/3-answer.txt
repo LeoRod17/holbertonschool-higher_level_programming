@@ -1,1 +1,2 @@
 Yes
+https://medium.com/@elodieriou/everything-is-object-in-python-152e198ffe14
