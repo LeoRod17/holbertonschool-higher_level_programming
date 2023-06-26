@@ -78,6 +78,6 @@ class Rectangle(Base):
         print(rec[:-1])
 
     def __str__(self):
-        txt ="[Rectangle] ({}) {}/{} - {}/{}"
+        txt = "[Rectangle] ({}) {}/{} - {}/{}"
         rec = txt.format(self.id, self.x, self.y, self.width, self.height)
         return rec
