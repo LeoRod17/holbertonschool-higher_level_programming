@@ -83,3 +83,18 @@ class Rectangle(Base):
         txt = "[Rectangle] ({}) {}/{} - {}/{}"
         rec = txt.format(self.id, self.x, self.y, self.width, self.height)
         return rec
+
+    def update(self, *args):
+        count = 0
+        for x in args:
+            if count == 0:
+                self.id = x
+            if count == 1:
+                self.width = x
+            if count == 2:
+                self.height = x
+            if count == 3:
+                self.x = x
+            if count == 4:
+                self.y = x
+            count = count + 1
