@@ -85,6 +85,7 @@ class Rectangle(Base):
         return rec
 
     def update(self, *args):
+        """a function that updates the rectangle"""
         count = 0
         for x in args:
             if count == 0:
