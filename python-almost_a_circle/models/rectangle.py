@@ -67,3 +67,12 @@ class Rectangle(Base):
     def area(self):
         """a function that returns the area of rectangle"""
         return (self.width * self.height)
+
+    def display(self):
+        """creating the square out of #"""
+        rec = ""
+        if self.height == 0 or self.width == 0:
+            return rec
+        for x in range(self.__height):
+            rec = rec + ('#' * self.__width + '\n')
+        print(rec[:-1])
