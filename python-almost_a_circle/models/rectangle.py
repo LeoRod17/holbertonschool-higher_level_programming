@@ -84,9 +84,10 @@ class Rectangle(Base):
         rec = txt.format(self.id, self.x, self.y, self.width, self.height)
         return rec
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """a function that updates the rectangle"""
-        count = 0
+        if args:
+            count = 0
         for x in args:
             if count == 0:
                 self.id = x
@@ -99,3 +100,16 @@ class Rectangle(Base):
             if count == 4:
                 self.y = x
             count = count + 1
+        else:
+            for x in kwargs.keys():
+                for y in kwargs.values():
+                    if x == "id":
+                        self.id = y
+                    if x == "width":
+                        self.width = y
+                    if x == "height":
+                        self.height = y
+                    if x == "x":
+                        self.x = y
+                    if x == "y":
+                        self.y = y
