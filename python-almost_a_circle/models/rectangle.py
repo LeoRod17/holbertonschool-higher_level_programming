@@ -71,9 +71,11 @@ class Rectangle(Base):
     def display(self):
         """creating the square out of #"""
         rec = ""
+        rec = rec + ('\n' * self.y)
         if self.height == 0 or self.width == 0:
             return rec
         for x in range(self.__height):
+            rec = rec + (" " * self.x)
             rec = rec + ('#' * self.__width + '\n')
         print(rec[:-1])
 
