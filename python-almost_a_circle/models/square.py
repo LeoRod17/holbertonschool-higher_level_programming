@@ -9,6 +9,7 @@ class Square (Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """returns the object Square with all their values"""
         txt = "[Square] ({}) {}/{} - <{}>"
         rec = txt.format(self.id, self.x, self.y, self.width)
         return rec
