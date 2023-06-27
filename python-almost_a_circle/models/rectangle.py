@@ -110,3 +110,6 @@ class Rectangle(Base):
                     self.x = y
                 if x == "y":
                     self.y = y
+    def to_dictionary(self):
+        dic = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return dic
