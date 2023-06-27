@@ -23,18 +23,18 @@ class Square(Rectangle):
         return rec
 
     def update(self, *args, **kwargs):
-         """a function that updates the Square"""
-         if args:
-                if len(args) > 0:
-                    self.id = args[0]
-                if len(args) > 1:
-                    self.width = args[1]
-                    self.height = args[1]
-                if len(args) > 2:
-                    self.x = args[2]
-                if len(args) > 3:
-                    self.y = args[3]
-         else:
+        """a function that updates the Square"""
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+                self.height = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
+        else:
             for x, y in kwargs.items():
                 if x == "id":
                     self.id = y
@@ -45,4 +45,3 @@ class Square(Rectangle):
                     self.x = y
                 if x == "y":
                     self.y = y
-
