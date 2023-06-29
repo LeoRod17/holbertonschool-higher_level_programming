@@ -31,3 +31,11 @@ class Base():
         filename = str(cls.__name__) + ".json"
         with open(filename, mode="w+") as f:
             f.write(cls.to_json_string(lista))
+
+    @staticmethod
+    def from_json_string(json_string):
+        lista = []
+        if json_string is None:
+            return lista
+        else:
+            return json.loads(json_string)
