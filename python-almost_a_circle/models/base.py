@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Write the first class Base:"""
 import json
+import os
 
 
 class Base():
@@ -54,13 +55,12 @@ class Base():
         """Classs method that returns a list of instances:"""
         filename = str(cls.__name__) + ".json"
         lista = []
-        with open(filename, mode="r") as f:
-            if f is None:
-                return lista
-            else:
+        if os.path.exists(filename):
+            with open(filename, mode="r") as f:
                 lista = cls.from_json_string(f.read())
                 r = []
                 for x in lista:
-                    r.append(cls.create())
+                    r.append(cls.create(**x))
                 return r
-
+        else:
+            return []
