@@ -48,3 +48,19 @@ class Base():
             form = cls(5, 7)
         form.update(**dictionary)
         return form
+
+    @classmethod
+    def load_from_file(cls):
+        """Classs method that returns a list of instances:"""
+        filename = str(cls.__name__) + ".json"
+        lista = []
+        with open(filename, mode="r") as f:
+            if f is None:
+                return lista
+            else:
+                lista = cls.from_json_string(f.read())
+                r = []
+                for x in lista:
+                    r.append(cls.create())
+                return r
+
