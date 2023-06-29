@@ -2,6 +2,7 @@
 """Write the first class Base:"""
 import json
 
+
 class Base():
     """The base class"""
     __nb_objects = 0
@@ -15,7 +16,9 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        stn = ""
         if list_dictionaries is None:
-            return "[]"
+            stn = "[]"
         else:
-            return str(list_dictionaries)
+            stn = str(list_dictionaries)
+        return stn
