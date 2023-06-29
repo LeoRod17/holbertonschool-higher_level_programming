@@ -39,3 +39,12 @@ class Base():
             return lista
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Square":
+            form = cls(5)
+        else:
+            form = cls(5, 7)
+        form.update(**dictionary)
+        return form
