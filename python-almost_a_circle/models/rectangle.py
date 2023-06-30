@@ -88,15 +88,15 @@ class Rectangle(Base):
         """a function that updates the rectangle"""
         if args:
             x = len(args)
-            if x == 0:
+            if x > 0:
                 self.id = args[0]
-            if x == 1:
+            if x > 1:
                 self.width = args[1]
-            if x == 2:
+            if x > 2:
                 self.height = args[2]
-            if x == 3:
+            if x > 3:
                 self.x = args[3]
-            if x == 4:
+            if x > 4:
                 self.y = args[4]
         else:
             for x, y in kwargs.items():
