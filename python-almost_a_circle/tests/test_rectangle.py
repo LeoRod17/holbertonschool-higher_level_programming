@@ -47,11 +47,12 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(Rectangle.__str__(r2),
                                "[Rectangle] (5) 2/6 - 6/3")
 
-
     def testDictionary(self):
         r1 = Rectangle(2, 4, 5, 6, 7)
         self.assertAlmostEqual(Rectangle.to_dictionary(r1),
-                                {'x': 5, 'y': 6, 'id': 7, 'height': 4, 'width': 2})
+                               {'x': 5, 'y': 6, 'id': 7, 'height': 4,
+                                'width': 2})
+
 
 if __name__ == '__main__':
     unittest.main()

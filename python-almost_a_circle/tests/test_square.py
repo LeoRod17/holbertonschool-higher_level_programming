@@ -33,7 +33,8 @@ class TestRectangle(unittest.TestCase):
     def testDictionary(self):
         s1 = Square(2, 5, 6, 7)
         self.assertAlmostEqual(Square.to_dictionary(s1),
-                                {'x': 5, 'y': 6, 'id': 7, 'size': 2})
+                               {'x': 5, 'y': 6, 'id': 7, 'size': 2})
+
 
 if __name__ == '__main__':
     unittest.main()
