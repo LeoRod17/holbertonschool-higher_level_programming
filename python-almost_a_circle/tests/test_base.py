@@ -1,10 +1,9 @@
 #!/usr/bin/python3
+"""Using unicode to test base class"""
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
-from models.square import Square
 import os
-"""Using unicode to test base class"""
 
 
 class TestBase(unittest.TestCase):
@@ -20,9 +19,9 @@ class TestBase(unittest.TestCase):
         self.assertAlmostEqual(b4.id, 1000000)
 
     def functionTestToJason_Strings(self):
-        self.assertAlmostEqual(Base.to_json_string(None),"[]")
-        self.assertAlmostEqual(Base.to_json_string([{"id": 6}]),'[{"id": 6}]')
-        self.assertAlmostEqual(Base.to_json_string([]),"[]")
+        self.assertAlmostEqual(Base.to_json_string(None), "[]")
+        self.assertAlmostEqual(Base.to_json_string([{"id": 6}]), '[{"id": 6}]')
+        self.assertAlmostEqual(Base.to_json_string([]), "[]")
 
     def functionTestSaveToFile(self):
         Base.save_to_file(None)
@@ -31,9 +30,9 @@ class TestBase(unittest.TestCase):
     def functionJasonString(self):
         self.assertAlmostEqual(Base.from_json_string(None), [])
         self.assertAlmostEqual(
-            Base.from_json_string('[{"id": 1}]'),[{"id": 1}])
-        self.assertAlmostEqual(Base.from_json_string("[]"),[])
-    
+            Base.from_json_string('[{"id": 1}]'), [{"id": 1}])
+        self.assertAlmostEqual(Base.from_json_string("[]"), [])
+
     def test_c(self):
         dictionary = {"id": 1}
         r1 = Rectangle.create(**dictionary)
