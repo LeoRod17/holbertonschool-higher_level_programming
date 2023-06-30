@@ -87,17 +87,17 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """a function that updates the rectangle"""
         if args:
-            for x in range(0, args):
-                if x == 0:
-                    self.id = args[0]
-                if x == 1:
-                    self.width = args[1]
-                if x == 2:
-                    self.height = args[2]
-                if x == 3:
-                    self.x = args[3]
-                if x == 4:
-                    self.y = args[4]
+            x = len(args)
+            if x == 0:
+                self.id = args[0]
+            if x == 1:
+                self.width = args[1]
+            if x == 2:
+                self.height = args[2]
+            if x == 3:
+                self.x = args[3]
+            if x == 4:
+                self.y = args[4]
         else:
             for x, y in kwargs.items():
                 if x == "id":
