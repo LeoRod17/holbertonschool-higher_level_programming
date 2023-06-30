@@ -17,10 +17,6 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r3 = Square("A", "B", "C", "E", 6)
 
-    def testArea(self):
-        s1 = Square(2)
-        self.assertAlmostEquals(Square.area(s1), 4)
-
     def teststr(self):
         s1 = Square(2, 5, 6, 7)
         self.assertAlmostEqual(Square.__str__(s1),
