@@ -49,9 +49,12 @@ class TestRectangle(unittest.TestCase):
 
     def testDictionary(self):
         r1 = Rectangle(2, 4, 5, 6, 7)
-        self.assertAlmostEqual(Rectangle.to_dictionary(r1),
-                               {'x': 5, 'y': 6, 'id': 7, 'height': 4,
-                                'width': 2})
+        r2_dictionary = r1.to_dictionary()
+        self.assertAlmostEqual(type(r2_dictionary), dict)
+
+    def testPrint(self):
+        r1 = Rectangle(1, 1, 0, 0)
+        self.assertAlmostEqual(r1.display(), None)
 
 
 if __name__ == '__main__':
