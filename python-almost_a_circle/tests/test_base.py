@@ -3,6 +3,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+import os
 """Using unicode to test base class"""
 
 
@@ -23,11 +24,20 @@ class TestBase(unittest.TestCase):
         self.assertAlmostEqual(Base.to_json_string([{"id": 6}]),'[{"id": 6}]')
         self.assertAlmostEqual(Base.to_json_string([]),"[]")
 
-    def functionTestSaveLoadToJason(self):
-        Rectangle.save_to_file(None)
-        self.assertAlmostEqual(Rectangle.load_from_file(), [])
-        r1 = Rectangle(10,8,4,3,2)
-        self.assertAlmostEqual(Square.save_to_file(r1))
-        self.assertAlmostEqual(Rectangle.load_from_file("Rectangle"))
+    def functionTestSaveToFile(self):
+        Base.save_to_file(None)
+        self.assertAlmostEqual(os.path.exists("BaseJson"), True)
+
+    def functionJasonString(self):
+        self.assertAlmostEqual(Base.from_json_string(None), [])
+        self.assertAlmostEqual(
+            Base.from_json_string('[{"id": 1}]'),[{"id": 1}])
+        self.assertAlmostEqual(Base.from_json_string("[]"),[])
+    
+    def test_c(self):
+        dictionary = {"id": 1}
+        r1 = Rectangle.create(**dictionary)
+        self.assertAlmostEqual(r1.id, 1)
+
     if __name__ == '__main__':
         unittest.main()
