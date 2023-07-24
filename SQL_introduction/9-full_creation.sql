@@ -1,6 +1,6 @@
 -- Creating a second table
 
-CREATE TABLE if not EXISTS description (
+CREATE TABLE if not EXISTS second_table (
     id int, name varchar(256), score int 
 );
 
