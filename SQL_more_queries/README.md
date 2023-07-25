@@ -1,0 +1,1 @@
+Working with the joins of a sql and the permisions of the users in sql
