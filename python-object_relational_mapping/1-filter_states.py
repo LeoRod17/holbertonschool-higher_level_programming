@@ -8,9 +8,9 @@ if __name__ == '__main__':
     dbconnection = MySQLdb.Connect("localhost", sys.argv[1],
                                    sys.argv[2], sys.argv[3])
     dbcommand = dbconnection.cursor()
-    dbcommand.execute(
-        "SELECT * FROM states WHERE LEFT(name,1)='N'ORDER BY states.id")
+    dbcommand.execute("SELECT * FROM states ORDER BY states.id")
     res = dbcommand.fetchall()
     for x in res:
-        print(x)
+        if x[1][0] == 'N':
+            print(x)
     dbconnection.close()
