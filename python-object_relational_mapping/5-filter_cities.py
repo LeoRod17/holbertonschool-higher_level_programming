@@ -21,7 +21,7 @@ if __name__ == '__main__':
         if x[1] == sys.argv[4]:
             lista.append(x[0])
     for s in range(len(lista)):
-        if s == len(lista) -1:
+        if s == len(lista) - 1:
             print("{}".format(lista[s]), end="")
         else:
             print("{}, ".format(lista[s]), end="")
