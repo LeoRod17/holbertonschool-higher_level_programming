@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that prints the first State object
+"""a script that lists all State objects that contain the letter a
 from the database hbtn_0e_6_usa"""
 from model_state import State
 import sys
@@ -14,8 +14,7 @@ if __name__ == '__main__':
 
     st = sqlalchemy.select(State.id, State.name).order_by(State.id)
     con = engine.connect()
-    res = con.execute(st).fetchone()
-    if res is not None:
-        print("{}: {}".format(res[0], res[1]))
-    else:
-        print("Nothing")
+    res = con.execute(st).fetchall()
+    for x in res:
+        if "a" in x[1]:
+            print("{}: {}".format(x[0], x[1]))
